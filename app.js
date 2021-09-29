@@ -25,6 +25,7 @@ emailBtn.addEventListener("click", (e)=>{
         if(!emailInp.parentElement.contains(document.querySelector('.err-msg'))){
             // Add Error Message to Document
             emailInp.parentElement.insertBefore(errMsg,emailInp.nextElementSibling);
+            setTimeout(()=>{errMsg.classList.add('err-msg--active');}, 10)
         };
         // Check if User Input is Invalid Email Address
     }else if(!regEx.test(emailInp.value)){
@@ -37,6 +38,7 @@ emailBtn.addEventListener("click", (e)=>{
         addClass(emailInp,"err");
         if(!emailInp.parentElement.contains(document.querySelector('.err-msg'))){
             emailInp.parentElement.insertBefore(errMsg,emailInp.nextElementSibling);
+            setTimeout(()=>{errMsg.classList.add('err-msg--active');}, 10)
         }
     }else{
         removeElement(emailInp.parentElement, document.querySelector(".err-msg"));

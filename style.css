@@ -123,6 +123,14 @@ font-family: inherit;
     font-size: 1.2rem;
     font-style: italic;
     margin: auto;
+    transition: all 0.2s ease-in-out;
+    /* display: block; */
+    transform: translateX(-5rem);
+    opacity: 0;
+}
+.err-msg--active{
+    opacity: 1;
+    transform: translateX(0);
 }
 .btn{
     border: none;
